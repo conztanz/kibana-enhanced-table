@@ -1,4 +1,4 @@
-# Kibana Enhanced Table (-Conztanz-)
+# Kibana Enhanced Table (--Conztanz--)
 
 This Kibana visualization plugin is like a Data Table, but with enhanced features like computed columns and filter bar.
 
