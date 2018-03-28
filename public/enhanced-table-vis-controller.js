@@ -225,23 +225,6 @@ module.controller('EnhancedTableVisController', function ($scope, Private, confi
         minimalColumns: vis.isHierarchical() && !params.showMeticsAtAllLevels,
         asAggConfigResults: true
       });
-        console.log(tableGroups)
-
-        // switching carrier code & status (only if we have at least 6 columns & TODO second condition )
-        if(tableGroups.tables[0].columns.length >= 6) {
-
-            //we switch status column with carrier code column (headers)
-            let tmp = tableGroups.tables[0].columns[0];
-            tableGroups.tables[0].columns[0] = tableGroups.tables[0].columns[5];
-            tableGroups.tables[0].columns[5] = tmp;
-
-            // for each row, we switch fields
-            _.forEach(tableGroups.tables[0].rows, function (row, index) {
-                let tmp = row[0];
-                row[0] = row[5];
-                row[5] = tmp;
-            });
-        }
 
         // process computed columns
       _.forEach(params.computedColumns, function (computedColumn, index) {
